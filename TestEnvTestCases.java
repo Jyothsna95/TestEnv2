@@ -16,28 +16,28 @@ public class TestEnvTestCases {
  @Test
  public void bothgivencorrect(){
   Login n=new Login("1","1");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
  }
  @Test
  public void bothgivenwrong(){
   Login n=new Login("username","password");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
  }
  @Test
  public void bothareOmitted(){
   Login n=new Login("","");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
   
  }
  @Test
  public void usernameOmitted(){
   Login n=new Login("","password");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
  }
  @Test
  public void passwordOmitted(){
   Login n=new Login("username","");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
  }
  @Test
  public void wrongusername(){
