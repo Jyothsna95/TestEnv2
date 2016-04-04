@@ -2,7 +2,7 @@ import com.netenrich.*;
 import java.sql.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
-public class TestEnvTestCases {
+public class ServerEnvTestCases {
         @Test
         public void Databasetest(){
                 DatabaseDetails main = new DatabaseDetails();
