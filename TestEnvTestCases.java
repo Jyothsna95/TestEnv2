@@ -16,7 +16,7 @@ public class TestEnvTestCases {
  @Test
  public void bothgivencorrect(){
   Login n=new Login("1","1");
-  assertEquals("You are logged in.",n.validate());
+  assertEquals("Login Failed.",n.validate());
  }
  @Test
  public void bothgivenwrong(){
