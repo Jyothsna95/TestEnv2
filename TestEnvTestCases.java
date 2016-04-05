@@ -8,23 +8,23 @@ public class TestEnvTestCases {
  public String database_username = main.Databaseusername();
  public String database_password = main.Databasepassword();
  @Test
- public void Databasetest(){
+ public void databaseTest(){
   Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
   java.sql.Connection connection = db_connection.Access_Database();
   assertNotNull(connection);
  }
  @Test
- public void bothgivencorrect(){
+ public void bothGivenCorrect(){
   Login n=new Login("1","1");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothgivenwrong(){
+ public void bothGivenWrong(){
   Login n=new Login("username","password");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothareOmitted(){
+ public void bothAreOmitted(){
   Login n=new Login("","");
   assertEquals("Login Failed.",n.validate());
   
@@ -40,22 +40,22 @@ public class TestEnvTestCases {
   assertEquals("Login Failed",n.validate());
  }
  @Test
- public void wrongusername(){
+ public void wrongUsername(){
   Login n=new Login("wrongusername","password");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void wrongpassword(){
+ public void wrongPassword(){
   Login n=new Login("username","password1");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothgivenbutloginfails(){
+ public void bothGivenButLoginFails(){
   Login n=new Login("","");
   assertEquals("Login Failed.",n.validate());
   }
   @Test
- public void bothgivenbutloginfails1(){
+ public void bothGivenButLoginFails1(){
   Login n=new Login("dummy","");
   assertEquals("Login Failed.",n.validate());
   
