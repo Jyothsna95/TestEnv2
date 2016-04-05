@@ -1,4 +1,4 @@
-mport com.netenrich.*;
+import com.netenrich.*;
 import java.sql.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
