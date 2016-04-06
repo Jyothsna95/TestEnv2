@@ -8,23 +8,23 @@ public class TestEnvTestCases {
  public String database_username = main.Databaseusername();
  public String database_password = main.Databasepassword();
  @Test
- public void databaseTest(){
+ public void databaseConnectionTest(){
   Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
   java.sql.Connection connection = db_connection.Access_Database();
   assertNotNull(connection);
  }
  @Test
- public void bothGivenCorrect(){
+ public void bothUsernameAndPasswordGivenCorrect(){
   Login n=new Login("1","1");
   assertEquals("You are logged in.",n.validate());
  }
  @Test
- public void bothGivenWrong(){
+ public void bothUsernameAndPasswordGivenWrong(){
   Login n=new Login("username","password");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothAreOmitted(){
+ public void bothUsernameAndPasswordAreOmitted(){
   Login n=new Login("","");
   assertEquals("Login Failed.",n.validate());
   
@@ -55,7 +55,7 @@ public class TestEnvTestCases {
   assertEquals("Login Failed.",n.validate());
   }
   @Test
- public void bothGivenButLoginFails1(){
+ public void bothGivenButLoginFailsAgain(){
   Login n=new Login("dummy","");
   assertEquals("Login Failed.",n.validate());
   
