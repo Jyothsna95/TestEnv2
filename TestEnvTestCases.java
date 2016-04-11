@@ -17,7 +17,7 @@ public class TestEnvTestCases {
  @Test
  public void bothUsernameAndPasswordGivenCorrect(){
   Login n=new Login("1","1");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("You are Logged in.",n.validate());
  }
  @Test
  public void bothUsernameAndPasswordGivenWrong(){
@@ -38,7 +38,7 @@ public class TestEnvTestCases {
  @Test
  public void passwordOmitted(){
   Login n=new Login("username","");
-  assertEquals("Login Failed",n.validate());
+  assertEquals("Login Failed.",n.validate());
  }
  @Test
  public void wrongUsername(){
