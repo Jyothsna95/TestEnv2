@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <project name="java-junit-template-project" default="run" basedir=".">
   <property name="test.build.dir" value="build/test" />
-  <property name="test.src.dir" value="test" />
+  <property name="test.src.dir" value="." />
 
 
   <path id="classpath.test">
     <pathelement location="lib/junit-4.10.jar" />
-    <pathelement location="lib/Project.jar"/>
+    <pathelement location="Project.jar"/>
   </path>
 
   <target name="test" depends="clean, run" />
