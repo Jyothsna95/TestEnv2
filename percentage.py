@@ -1,7 +1,7 @@
 import os
 #This file generates the test percentage ratio of TEST_CASES.
 def functionName( percentage ):
-    if percentage < 40.0:
+    if percentage < 70.0:
         raise Exception("BUILD FAILED :" +str(percentage))
 
 text_file=open("TEST-TestEnvTestCases.txt","r")
