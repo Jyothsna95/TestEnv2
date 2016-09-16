@@ -1,5 +1,5 @@
 
 Test_Servers:
-    testEnv: 70
+    testEnv: 40
     preProdEnv: 80
     prodEnv: 90
